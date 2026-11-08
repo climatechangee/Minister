@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honourable Minister of Environment - Business Card</title>
+<style>
+    :root {
+    color-scheme: light;
+    --green-900: #123d2c;
+    --green-700: #246746;
+    --green-500: #4b8c63;
+    --green-100: #e8f1e9;
+    --ink: #1d2b24;
+    --muted: #64736a;
+    --paper: #ffffff;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background: #edf3ee;
+    color: var(--ink);
+    font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  }
+  a { 
+    /* color: var(--green-900); */
+     color: #246746;
+    text-decoration: none;
+  }
+
+  .aaa {
+    margin-bottom: -10px;
+    margin-top: 9px;
+    color: #246746;
+    
+  }
+
+  .scene {
+    width: min(100%, 600px);
+    perspective: 1400px;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.75 / 1;
+    transform-style: preserve-3d;
+    transition: transform 700ms cubic-bezier(.2, .75, .25, 1);
+  }
+
+  .card.flipped { transform: rotateY(180deg); }
+
+  .face {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    padding: 30px 34px;
+    border: 1px solid #dce7de;
+    border-radius: 12px;
+    background: var(--paper);
+    box-shadow: 0 24px 60px rgba(18, 61, 44, .14), 0 3px 10px rgba(18, 61, 44, .06);
+    backface-visibility: hidden;
+  }
+
+  .front {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .crest-wrap {
+    min-height: 150px;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid #dce7de;
+    padding-right: 24px;
+  }
+
+  .coat {
+    display: block;
+    width: 104px;
+    height: 104px;
+    object-fit: contain;
+  }
+
+  .identity { min-width: 0; }
+
+  .frn {
+    margin-bottom: 10px;
+    color: var(--green-700);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+.env {
+    margin: 0;
+    color: var(--green-900);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.12;
+    /* text-decoration: u; */
+    text-transform: uppercase;
+  }
+  .ministry {
+    margin: 0;
+    color: var(--green-900);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.12;
+  }
+
+  .rule {
+    width: 69%;
+    height: 3px;
+    margin: 15px 0;
+    border: 0;
+    background: var(--green-500);
+  }
+
+  .title {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    line-height: 1.5;
+  }
+
+  .name {
+    margin-top: 5px;
+    color: var(--green-900);
+    font-size: 19px;
+    font-weight: 750;
+    line-height: 1.25;
+  }
+
+  .accent-bar {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 7px;
+    background: var(--green-700);
+  }
+
+  .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotateY(180deg);
+  }
+
+  .back-head {
+    color: var(--green-900);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 700;
+  }
+
+  .back-kicker {
+    margin-top: 5px;
+    color: var(--green-700);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+  }
+
+  .contact-list {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 24px;
+    margin-top: 25px;
+  }
+
+  .item-label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+
+  .item, .back a {
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+
+  .back a {
+    color: var(--green-700);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .back a:hover { text-decoration: underline; }
+
+  .motto {
+    margin-top: 24px;
+    padding-top: 13px;
+    border-top: 1px solid #e4ebe5;
+    color: var(--muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .flip-button {
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1px solid var(--green-900);
+    border-radius: 6px;
+    background: var(--green-900);
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 160ms ease, transform 160ms ease;
+  }
+
+  .flip-button:hover { background: var(--green-700); }
+  .flip-button:active { transform: translateY(1px); }
+  .flip-button:focus-visible { outline: 3px solid #91b99c; outline-offset: 3px; }
+
+  .hint {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+
+  @media (max-width: 520px) {
+    body { padding: 22px 14px; }
+    .card { aspect-ratio: 1.22 / 1; }
+    .face { padding: 22px 20px 22px 25px; }
+    .front { grid-template-columns: 82px 1fr; gap: 17px; }
+    .crest-wrap { min-height: 120px; padding-right: 14px; }
+    .coat { width: 72px; height: 72px; }
+    .frn { font-size: 8px; letter-spacing: 1.2px; }
+    .ministry { font-size: 20px; }
+    .rule { margin: 11px 0; }
+    .title { font-size: 9px; }
+    .name { font-size: 16px; }
+    .back-head { font-size: 18px; }
+    .contact-list { grid-template-columns: 1fr; gap: 12px; margin-top: 17px; }
+    .item, .back a { font-size: 12px; }
+    .motto { margin-top: 16px; font-size: 11px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card, .flip-button { transition: none; }
+  }
+
+</style>
+</head>
+<body>
+  <main class="scene">
+    <div class="card" id="bizCard">
+      <section class="face front" aria-label="Business card front">
+        <div class="accent-bar" aria-hidden="true"></div>
+        <div class="crest-wrap">
+          <img class="coat" src="coat-of-arm.png" alt="Coat of arms of Nigeria">
+        </div>
+        <div class="identity">
+        
+          <h1 class="env">Federal Ministry of Environment</h1>
+          <br>
+          <div class="item">
+            <span class="item-label aa"> <strong class="aaa"> <span style="color: Black; font-size: 12px;">Phone: </span> +234 800 000 000</strong> </span>
+            <span class="item-label aa"> <strong class="aaa"><a href="https://environment.gov.ng"> <span style="color: Black; font-size: 12px;">Website: </span> www.environment.gov.ng</a></strong> </span>
+            
+           
+            
+          </div><br>
+          <hr class="rule">
+          <!-- <br> -->
+    
+          <div class="title">HONOURABLE MINISTER, ENVIRONMENT</div>
+          <div class="name">BALARABE ABBAS LAWAL</div>
+        </div>
+      </section>
+
+      <section class="face back" aria-label="Business card reverse" aria-hidden="true">
+        <div class="accent-bar" aria-hidden="true"></div>
+        <div class="back-head">Federal Ministry of Environment</div>
+        <div class="back-kicker">ABUJA, NIGERIA</div>
+        <div class="contact-list">
+          <div class="item">
+            <span class="item-label">Website</span>
+            <a href="https://environment.gov.ng" target="_blank" rel="noopener noreferrer">environment.gov.ng</a>
+          </div>
+           <div class="item">
+            <span class="item-label">Phone</span>
+            +23480000000
+          </div>
+          <div class="item">
+            <span class="item-label">Office</span>
+            Federal Ministry of Environment,<br>Mabushi, Abuja, FCT, Nigeria
+          </div>
+        </div>
+        <!-- <div class="motto">Unity and Faith, Peace and Progress</div> -->
+      </section>
+    </div>
+  </main>
+
+  <!-- <button class="flip-button" id="flipBtn" type="button" aria-pressed="false">View reverse</button> -->
+  <!-- <p class="hint">Use the button to view the reverse side.</p> -->
+
+  <script>
+    const card = document.getElementById('bizCard');
+    const button = document.getElementById('flipBtn');
+    const front = card.querySelector('.front');
+    const back = card.querySelector('.back');
+
+    button.addEventListener('click', () => {
+      const flipped = card.classList.toggle('flipped');
+      button.textContent = flipped ? 'View front' : 'View reverse';
+      button.setAttribute('aria-pressed', String(flipped));
+      front.setAttribute('aria-hidden', String(flipped));
+      back.setAttribute('aria-hidden', String(!flipped));
+    });
+  </script>
+</body>
+</html>
